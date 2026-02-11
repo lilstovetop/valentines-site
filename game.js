@@ -10,6 +10,7 @@ const envelope = document.getElementById("envelope");
 const openBtn = document.getElementById("openBtn");
 const card = document.getElementById("card");
 const collageBg = document.getElementById("collageBg");
+const bgm = document.getElementById("bgm");
 
 const collageImages = [
   "Photos/photo-01.jpg",
@@ -144,6 +145,9 @@ function onYes() {
   subtitle.textContent = "It’s a date.";
   if (noBtn && noBtn.parentElement) {
     noBtn.remove();
+  }
+  if (bgm) {
+    bgm.play().catch(() => {});
   }
   celebrate();
 }
