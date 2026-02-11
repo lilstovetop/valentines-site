@@ -79,6 +79,9 @@ function openEnvelope() {
   envelope.classList.add("opening");
   openBtn.disabled = true;
   document.body.classList.add("proposal-open");
+  if (bgm) {
+    bgm.play().catch(() => {});
+  }
 
   setTimeout(() => {
     envelope.hidden = true;
@@ -145,9 +148,6 @@ function onYes() {
   subtitle.textContent = "It’s a date.";
   if (noBtn && noBtn.parentElement) {
     noBtn.remove();
-  }
-  if (bgm) {
-    bgm.play().catch(() => {});
   }
   celebrate();
 }
