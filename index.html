@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="collage-bg" id="collageBg" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <main class="app">
+      <section class="envelope" id="envelope" aria-label="Closed envelope">
+        <div class="envelope-art">
+          <div class="env-back"></div>
+          <div class="env-letter"></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <button id="openBtn" class="seal-btn" type="button" aria-label="Open the envelope"></button>
+        </div>
+        <p class="envelope-text">Tap the heart seal to open.</p>
+      </section>
+
+      <section class="card" id="card" aria-live="polite" hidden>
+        <div class="stamp">From: Big Pants</div>
+        <h1 id="title">Smoochie, will you be my valentine?</h1>
+        <p id="subtitle">
+          I learned how to vibecode just so I could make this for you. I dare
+          you to press no.
+        </p>
+
+        <div class="actions" id="actions">
+          <button id="yesBtn" class="btn btn-yes" type="button">Yes</button>
+          <button id="noBtn" class="btn btn-no" type="button">No</button>
+        </div>
+
+        <div class="result" id="result" hidden>
+          <p>
+            I love you with my whole heart and I can’t wait to celebrate us this
+            weekend/next week.
+          </p>
+          <button id="replayBtn" class="btn btn-secondary" type="button">
+            Replay the moment
+          </button>
+        </div>
+      </section>
+
+      <div id="hearts" class="hearts" aria-hidden="true"></div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
