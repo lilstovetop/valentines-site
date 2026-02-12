@@ -129,6 +129,10 @@ body.proposal-open .collage-bg {
   margin-top: 0;
 }
 
+.card.final-state .stamp {
+  display: none;
+}
+
 .envelope {
   display: flex;
   flex-direction: column;
