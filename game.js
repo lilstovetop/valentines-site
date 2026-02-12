@@ -11,6 +11,7 @@ const openBtn = document.getElementById("openBtn");
 const card = document.getElementById("card");
 const collageBg = document.getElementById("collageBg");
 const bgm = document.getElementById("bgm");
+const finalGif = document.getElementById("finalGif");
 
 const collageImages = [
   "Photos/photo-01.jpg",
@@ -144,6 +145,7 @@ function celebrate() {
 function onYes() {
   actions.hidden = true;
   result.hidden = false;
+  card.classList.add("final-state");
   title.textContent = "You just made my day.";
   subtitle.textContent = "It’s a date.";
   if (noBtn && noBtn.parentElement) {
@@ -155,6 +157,7 @@ function onYes() {
 function onReplay() {
   actions.hidden = false;
   result.hidden = true;
+  card.classList.remove("final-state");
   title.textContent = original.title;
   subtitle.textContent = original.subtitle;
   noBtn.style.position = "";
@@ -171,5 +174,14 @@ noBtn.addEventListener("pointerdown", moveNoButton);
 yesBtn.addEventListener("click", onYes);
 replayBtn.addEventListener("click", onReplay);
 openBtn.addEventListener("click", openEnvelope);
+
+if (finalGif) {
+  finalGif.addEventListener("load", () => {
+    finalGif.hidden = false;
+  });
+  finalGif.addEventListener("error", () => {
+    finalGif.hidden = true;
+  });
+}
 
 buildCollage();

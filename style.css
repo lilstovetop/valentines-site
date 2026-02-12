@@ -117,6 +117,18 @@ body.proposal-open .collage-bg {
   backdrop-filter: blur(4px);
 }
 
+.card.final-state {
+  padding-top: 24px;
+}
+
+.card.final-state h1 {
+  margin-bottom: 6px;
+}
+
+.card.final-state #subtitle {
+  margin-top: 0;
+}
+
 .envelope {
   display: flex;
   flex-direction: column;
@@ -345,12 +357,21 @@ p {
 }
 
 .result {
-  margin-top: 24px;
+  margin-top: 20px;
   padding: 18px 20px;
   border-radius: 18px;
   background: #fff7f9;
   border: 1px solid rgba(255, 77, 109, 0.16);
   text-align: center;
+}
+
+.final-gif {
+  width: min(100%, 300px);
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 14px;
+  margin: 14px auto 0;
+  display: block;
 }
 
 .result h2 {
