@@ -119,6 +119,7 @@ body.proposal-open .collage-bg {
 
 .card.final-state {
   padding-top: 24px;
+  transform: translateY(-46px);
 }
 
 .card.final-state h1 {
@@ -483,6 +484,10 @@ p {
 
   .card {
     padding: 34px 24px;
+  }
+
+  .card.final-state {
+    transform: translateY(-28px);
   }
 
   .actions {
